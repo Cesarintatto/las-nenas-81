@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Adriana y Patricia Jaramillo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
         <meta name="description" content="Celebramos la vida de Adriana y Patricia Jaramillo">
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.webp">
         <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -12,7 +14,7 @@
     </head>
     <body>
         <header>
-            <nav class="nav-header">
+            <nav class="nav-header" id="header">
                 <!-- <div class="nav-header-icon">
                     <i class="fa-solid fa-bars"></i>
                 </div> -->
@@ -63,8 +65,21 @@
                     <br>
                     
                     <p data-aos="fade-right">Al finalizar, carga tu video en el siguiente enlace,  donde ubicaras tu carpeta para subirlo.</p>
+                    <br>
+                    <br>
 
-                    <a data-aos="fade-right" href="#">Prueba</a>
+                    <h2>Carga tu video</h2>
+
+                    <form action="upload.php" method="POST" enctype="multipart/form-data" class="form-video">
+                        <p class="form-video-input--cont">
+                            <label for="#archivos">Elige tu Video</label>
+                            <input type="file" name="archivos" id="archivos"/>
+                        </p>
+                        <br><br>
+                        <p>
+                            <button type="submit" class="btn-enviar">Enviar</button>
+                        </p>
+                    </form>
 
                     <picture data-aos="fade-down-left" class="video-img">
                         <img src="img/video-flower.webp" alt="video-flower">
